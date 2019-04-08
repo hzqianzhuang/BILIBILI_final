@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Contact us</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	
+
+  	
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="http://39.108.157.1/public/static/favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="http://39.108.157.1/public/static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="http://39.108.157.1/public/static/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="http://39.108.157.1/public/static/css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="http://39.108.157.1/public/static/css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="http://39.108.157.1/public/static/css/style2.css">
+
+	<!-- Modernizr JS -->
+	<script src="http://39.108.157.1/public/static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="http://39.108.157.1/public/static/js/respond.min.js"></script>
+	<![endif]-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYfo_T8_rg466Zf92j1rhXU63noQE5WU&sensor=false"></script>
+
+    <script>
+
+    var i = 0;
+    var sum1=5;
+    var avelong=120.728285;
+    var avelati=27.3182726;
+
+    var vid = ["Wenzhou Kean University"] ;
+    var name2 = ["WKU"] ;
+    var lat =["27.917790"] ;
+    var lon = ["120.651813"] ;
+
+  
+    function initialize() {
+        var mapOptions = {
+                zoom: sum1,
+
+                center: new google.maps.LatLng(avelati, avelong),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+       };
+
+       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+       var infowindow = new google.maps.InfoWindow();
+
+  var markerIcon = {
+      scaledSize: new google.maps.Size(100, 100),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(32,65),
+      labelOrigin: new google.maps.Point(40,33)
+  };
+        var location;
+        var mySymbol;
+        var marker, m;
+
+        
+        var MarkerLocations = new Array(sum1);
+        for(var i =0;i<sum1;i++){
+          MarkerLocations[i]= new Array(4); 
+        }
+
+       for (var x = 0; x < sum1; x++) {
+        MarkerLocations[x][0]= vid[x];
+        MarkerLocations[x][1]= name2[x];
+        MarkerLocations[x][2]= parseFloat(lat[x]);
+        MarkerLocations[x][3]= parseFloat(lon[x]);
+       }
+
+
+for (m = 0; m < sum1; m++) {
+
+        location = new google.maps.LatLng(MarkerLocations[m][2], MarkerLocations[m][3]),
+        marker = new google.maps.Marker({ 
+      map: map, 
+      position: location, 
+      icon: markerIcon, 
+      label: {
+      text: MarkerLocations[m][0] ,
+    color: "black",
+        fontSize: "16px",
+        fontWeight: "bold"
+      }
+  });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, m) {
+        return function() {
+          infowindow.setContent("Vendor Name: " + MarkerLocations[m][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, m));
+ }
+}
+  google.maps.event.addDomListener(window, 'load', initialize);;
+
+  </script>
+
+		<script type="text/javascript">
+			function home(){
+				window.location.href='http://39.108.157.1/public/page/index.html' + window.location.search;
+			}
+			function report(){
+				window.location.href='http://39.108.157.1/public/page/report.php' + window.location.search;
+			}
+			function contact(){
+				window.location.href='http://39.108.157.1/public/page/contact.html' + window.location.search;
+			}
+
+		</script>
+
+	</head>
+	<body>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+			<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+			<h1 id="fh5co-logo"><a href="index.html"> Video Report</a></h1>
+			<nav id="fh5co-main-menu" role="navigation">
+				<ul>
+					<li> <a href="javascript:void(0)" onclick="home()"> Home</a></li>
+					<li> <a href="javascript:void(0)" onclick="report()">Video Report </a></li>
+					<li  class="fh5co-active"> <a href="javascript:void(0)" onclick="contact()">Contact us </a></li>
+					<li><a href="http://39.108.157.1/public/page/searchVideo.html">Return to Search Page</a></li>
+
+
+
+
+				</ul>
+			</nav>
+
+			<h1 id="fh5co-logo"><img src="http://39.108.157.1/public/static/img/bilibili.jpg" height="176" width="250"></h1>
+			<div class="fh5co-footer">
+				<p><small>&copy; Copyright &copy; 2019 WKU BILIBILI TEST DEMO_1 </span> <span> Share video report into </a></span></small></p>
+				<ul>
+					<li><a href="https://www.facebook.com/"><i class="icon-facebook2"></i></a></li>
+					<li><a href="https://twitter.com/"><i class="icon-twitter2"></i></a></li>
+					<li><a href="https://www.instagram.com/"><i class="icon-instagram"></i></a></li>
+					<li><a href="https://www.linkedin.com/"><i class="icon-linkedin2"></i></a></li>
+				</ul>
+			</div>
+
+		</aside>
+
+
+		<div id="fh5co-main">
+			<div class="fh5co-more-contact">
+				<div class="fh5co-narrow-content">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<i class="icon-globe"></i>
+								</div>
+								<div class="fh5co-text">
+									<p><a href="mailto:zhuha@kean.edu">zhuha@kean.edu</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="fh5co-text">
+									<p>88 Daxue Rd, Ouhai, Wenzhou, Zhejiang Province, China 325060</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<i class="icon-phone"></i>
+								</div>
+								<div class="fh5co-text">
+									<p><a href="tel://">+86 151 5753 7167</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
+				
+				<div class="row">
+					<div class="col-md-4">
+						<h2>Get In Touch</h2>
+					</div>
+				</div>
+				<form action="">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Name">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Email">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Phone">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+									</div>
+									<div class="form-group">
+										<input type="submit" class="btn btn-primary btn-md" value="Send Message">
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</form>
+			</div>
+		<div id="map-canvas" style="height: 400px; width: 720px;"></div>	
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="http://39.108.157.1/public/static/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="http://39.108.157.1/public/static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="http://39.108.157.1/public/static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="http://39.108.157.1/public/static/js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="http://39.108.157.1/public/static/js/jquery.flexslider-min.js"></script>
+	<!-- Google Map -->
+	
+	<script src="http://39.108.157.1/public/static/js/google_map.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="http://39.108.157.1/public/static/js/main.js"></script>
+
+	</body>
+</html>
+

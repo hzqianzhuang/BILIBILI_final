@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../js/getUrl.js" type="text/javascript"></script>
+</head>
+<script>
+    var name = $.getUrlParam('name');
+    var id = $.getUrlParam('id');
+
+    window.onload = function(){
+        $("#addname").val(name);
+        $("#addid").val(id);
+    }
+</script>
+
+<body>
+
+<script>
+var r = window.location.search;
+document.write(r);
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+body{
+	font-weight: 500;
+	font-size: 16px;
+	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
+}
+
+.pad-15{padding: 15px;}
+.pad-50{padding: 50px;}
+.bgcolor-1 { background: #f0efee; }
+.bgcolor-2 { background: #f9f9f9; }
+.bgcolor-3 { background: #e8e8e8; }/*light grey*/
+.bgcolor-4 { background: #2f3238; color: #fff; }/*Dark grey*/
+.bgcolor-5 { background: #df6659; color: #521e18; }/*pink1*/
+.bgcolor-6 { background: #2fa8ec; }/*sky blue*/
+.bgcolor-7 { background: #d0d6d6; }/*White tea*/
+.bgcolor-8 { background: #3d4444; color: #fff; }/*Dark grey2*/
+.bgcolor-9 { background: #ef3f52; color: #fff;}/*pink2*/
+.bgcolor-10{ background: #64448f; color: #fff;}/*Violet*/
+.bgcolor-11{ background: #3755ad; color: #fff;}/*dark blue*/
+.bgcolor-12{ background: #3498DB; color: #fff;}/*light blue*/
+.bgcolor-20{ background: #494A5F;color: #D5D6E2;}
+
+	.btn{
+		border: none;
+		border-radius: 0;
+		text-transform: uppercase;
+		padding-top: 0;
+		padding-bottom: 0;
+		position: relative;
+		transition: all 0.3s ease 0s;
+	}
+	.btn:before{
+		content: "";
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-top: 2px solid transparent;
+		transition: all 0.3s ease 0s;
+	}
+	.btn:hover:before{
+		transform: translateY(42px);
+	}
+	.btn:after{
+		content: "\f105";
+		font-family:fontawesome;
+		display: inline-block;
+		width: 44px;
+		height: 44px;
+		border: 2px solid transparent;
+		font-size: 24px;
+		line-height: 40px;
+		position: relative;
+		top: 0;
+		right: -16px;
+		transition: all 0.43s ease 0s;
+	}
+	.btn:hover:after{
+		transform: rotateX(180deg);
+	}
+	.btn.btn-sm:hover:before{
+		transform: translateY(32px);
+	}
+	.btn.btn-sm:after{
+		width: 34px;
+		height: 34px;
+		line-height: 30px;
+		font-size: 20px;
+		right: -10px;
+	}
+	.btn.btn-xs:hover:before{
+		transform: translateY(22px);
+	}
+	.btn.btn-xs:after{
+		width: 24px;
+		height: 24px;
+		line-height: 20px;
+		font-size: 16px;
+		right: -5px;
+	}
+	.btn.red{
+		color: #ff6e6e;
+	}
+	.btn.red:before,
+	.btn.red:after{
+		border-color: #ff6e6e;
+	}
+	.btn.blue{
+		color: #5cbcf7;
+	}
+	.btn.blue:before,
+	.btn.blue:after{
+		border-color: #5cbcf7;
+	}
+	.btn.orange{
+		color: #ef965b;
+	}
+	.btn.orange:before,
+	.btn.orange:after{
+		border-color: #ef965b;
+	}
+	.btn.green{
+		color: #7ad79a;
+	}
+	.btn.green:before,
+	.btn.green:after{
+		border-color: #7ad79a;
+	}
+	@media only  screen and (max-width: 767px){
+		.btn{ margin-bottom: 20px; }
+	}
